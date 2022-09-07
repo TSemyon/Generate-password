@@ -1,17 +1,28 @@
+'use strict'
+
 window.addEventListener('DOMContentLoaded', () => {
-  const btnWelcome = document.querySelector('.welcome__button'),
+   const btnWelcome = document.querySelector('.welcome__button'),
         btnChoice = document.querySelectorAll('.choice__button'),
         welcomeSection = document.querySelector('.welcome'),
         choiceSection = document.querySelector('.choice'),
-        generateSection = document.querySelector('.generate')
+        generateSection = document.querySelector('.generate'),
         btnCopy = document.querySelector('#copy'),
         btnGenerate = document.querySelector('#generate'),
         input = document.querySelector('.generate__input')
 
-  btnWelcome.addEventListener('click', () => {
-      welcomeSection.classList.toggle('active')
-      choiceSection.classList.toggle('active')
-  })
+   function copyInputValue(item) {
+      item.select()
+      document.execCommand('copy')
+   }
+
+   btnCopy.addEventListener('click', () => {
+      copyInputValue(input)
+   })
+
+   btnWelcome.addEventListener('click', () => {
+         welcomeSection.classList.toggle('active')
+         choiceSection.classList.toggle('active')
+   })
 
    btnChoice.forEach(btn => {
       btn.addEventListener('click', (e) => {
