@@ -1,5 +1,53 @@
 @import "_nullstyle";
 
+// VARIABLES //
+
+$cwhite: #fff;
+$cblue: #3726F2;
+$ls: 0.7px;
+$fw300: 300;
+$fw700: 700;
+$fs: 29.78px;
+
+// TEMPLATE // 
+
+%fontstyle300 {
+   color: $cwhite;
+   letter-spacing: $ls;
+}
+
+%fontstyle700 {
+   font-size: $fs;
+   font-weight: $fw700;
+   color: $cwhite;
+   letter-spacing: $ls;
+}
+
+%fontstyle300 {
+   font-weight: $fw300;
+   color: $cwhite;
+   letter-spacing: $ls;
+}
+
+%btnstyle {
+   padding: 12px 21px;
+   min-width: 150px;
+   color: $cwhite;
+   background-color: transparent;
+   border: 1px solid $cwhite;
+   font-size: 20px;
+   letter-spacing: 3.5px;
+   font-weight: 500;
+   transition: color .6s ease 0s, background-color .6s ease 0s;
+   margin: 0px 0px 24px 0px;
+   &:hover {
+      color: $cblue;
+      background-color: $cwhite;
+   }
+}
+
+// CONTAINER & WRAPPER //
+
 ._container {
    max-width: 1200px;
    margin: 0 auto;
@@ -11,10 +59,8 @@
    display: flex;
    flex-direction: column;
    height: 100vh;
-   background-color: #3726F2;
+   background-color: $cblue;
 }
-
-
 
 // WELCOME //
 
@@ -29,37 +75,18 @@
       padding: 217px 0px 347px 0px;
    }
    &__button {
-      padding: 12px 21px ;
-      color: #fff;
-      background-color: transparent;
-      border: 1px solid #fff;
-      font-size: 20px;
-      letter-spacing: 3.5px;
-      font-weight: 500;
-      transition: color .5s ease 0s, background-color .5s ease 0s;
-      &:hover {
-         color: #3726F2;
-         background-color: #fff;
-      }
+      @extend %btnstyle;
    }
    h1 {
-      color: #fff;
-      font-size: 29.78px;
-      font-weight: 700;
-      letter-spacing: 0.7px;
+      @extend %fontstyle700;
    }
    h2 {
-      color: #fff;
-      font-size: 29.78px;
-      font-weight: 700;
+      @extend %fontstyle700;
       margin: 0px 0px 14px 0px;
-      letter-spacing: 0.7px;
    }
    h3 {
-      color: #fff;
+      @extend %fontstyle300;
       margin: 0px 0px 34px 0px;
-      font-weight: 300;
-      letter-spacing: 0.7px;
    }
 }
 
@@ -73,31 +100,13 @@
       padding: 253px 0px 0px 0px;
    }
    &__button {
-      padding: 12px 21px;
-      min-width: 150px;
-      color: #fff;
-      background-color: transparent;
-      border: 1px solid #fff;
-      font-size: 20px;
-      letter-spacing: 3.5px;
-      font-weight: 500;
-      transition: color .5s ease 0s, background-color .5s ease 0s;
-      margin: 0px 0px 24px 0px;
-      &:hover {
-         color: #3726F2;
-         background-color: #fff;
-      }
+      @extend %btnstyle;
    }
    h2 {
-      color: #fff;
-      font-size: 29.78px;
-      font-weight: 700;
+      @extend %fontstyle700;
       margin: 0px 0px 14px 0px;
-      letter-spacing: 0.7px;
    }
 }
-
-
 
 // GENERATE //
 
@@ -109,20 +118,7 @@
       padding: 253px 0px 0px 0px;
    }
    &__button {
-      padding: 12px 21px;
-      min-width: 150px;
-      color: #fff;
-      background-color: transparent;
-      border: 1px solid #fff;
-      font-size: 20px;
-      letter-spacing: 3.5px;
-      font-weight: 500;
-      transition: color .5s ease 0s, background-color .5s ease 0s;
-      margin: 0px 0px 24px 0px;
-      &:hover {
-         color: #3726F2;
-         background-color: #fff;
-      }
+      @extend %btnstyle;
    }
    &__input {
       height: 50px;
@@ -135,11 +131,8 @@
       padding: 0px 0px 0px 20px;
    }
    h2 {
-      color: #fff;
-      font-size: 29.78px;
-      font-weight: 700;
+      @extend %fontstyle700;
       margin: 0px 0px 14px 0px;
-      letter-spacing: 0.7px;
    }
 }
 .buttons__row {

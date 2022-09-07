@@ -76,6 +76,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+.welcome h3 {
+  color: #fff;
+  letter-spacing: 0.7px;
+}
+
+.generate h2, .choice h2, .welcome h2, .welcome h1 {
+  font-size: 29.78px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.7px;
+}
+
+.welcome h3 {
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.7px;
+}
+
+.generate__button, .choice__button, .welcome__button {
+  padding: 12px 21px;
+  min-width: 150px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-size: 20px;
+  letter-spacing: 3.5px;
+  font-weight: 500;
+  transition: color 0.6s ease 0s, background-color 0.6s ease 0s;
+  margin: 0px 0px 24px 0px;
+}
+.generate__button:hover, .choice__button:hover, .welcome__button:hover {
+  color: #3726F2;
+  background-color: #fff;
+}
+
 ._container {
   max-width: 1200px;
   margin: 0 auto;
@@ -102,38 +137,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 217px 0px 347px 0px;
 }
-.welcome__button {
-  padding: 12px 21px;
-  color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
-  font-size: 20px;
-  letter-spacing: 3.5px;
-  font-weight: 500;
-  transition: color 0.5s ease 0s, background-color 0.5s ease 0s;
-}
-.welcome__button:hover {
-  color: #3726F2;
-  background-color: #fff;
-}
-.welcome h1 {
-  color: #fff;
-  font-size: 29.78px;
-  font-weight: 700;
-  letter-spacing: 0.7px;
-}
 .welcome h2 {
-  color: #fff;
-  font-size: 29.78px;
-  font-weight: 700;
   margin: 0px 0px 14px 0px;
-  letter-spacing: 0.7px;
 }
 .welcome h3 {
-  color: #fff;
   margin: 0px 0px 34px 0px;
-  font-weight: 300;
-  letter-spacing: 0.7px;
 }
 
 .choice {
@@ -144,28 +152,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   padding: 253px 0px 0px 0px;
 }
-.choice__button {
-  padding: 12px 21px;
-  min-width: 150px;
-  color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
-  font-size: 20px;
-  letter-spacing: 3.5px;
-  font-weight: 500;
-  transition: color 0.5s ease 0s, background-color 0.5s ease 0s;
-  margin: 0px 0px 24px 0px;
-}
-.choice__button:hover {
-  color: #3726F2;
-  background-color: #fff;
-}
 .choice h2 {
-  color: #fff;
-  font-size: 29.78px;
-  font-weight: 700;
   margin: 0px 0px 14px 0px;
-  letter-spacing: 0.7px;
 }
 
 .generate {
@@ -175,22 +163,6 @@ h1, h2, h3, h4, h5, h6 {
 .generate__content {
   display: inline-block;
   padding: 253px 0px 0px 0px;
-}
-.generate__button {
-  padding: 12px 21px;
-  min-width: 150px;
-  color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
-  font-size: 20px;
-  letter-spacing: 3.5px;
-  font-weight: 500;
-  transition: color 0.5s ease 0s, background-color 0.5s ease 0s;
-  margin: 0px 0px 24px 0px;
-}
-.generate__button:hover {
-  color: #3726F2;
-  background-color: #fff;
 }
 .generate__input {
   height: 50px;
@@ -203,11 +175,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0px 0px 0px 20px;
 }
 .generate h2 {
-  color: #fff;
-  font-size: 29.78px;
-  font-weight: 700;
   margin: 0px 0px 14px 0px;
-  letter-spacing: 0.7px;
 }
 
 .buttons__row {
